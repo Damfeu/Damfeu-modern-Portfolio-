@@ -46,11 +46,11 @@
     --neon-violet: 265 90% 65%;
     --neon-cyan: 185 100% 55%;
     --neon-green: 160 84% 39%;
-    
+
     /* Glow Effects */
     --glow-blue: 210 100% 50%;
     --glow-violet: 265 90% 60%;
-    
+
     /* Glass Effect */
     --glass-bg: 230 20% 10% / 0.6;
     --glass-border: 230 20% 25% / 0.3;
@@ -90,10 +90,11 @@
 }
 
 @layer components {
+
   /* Glassmorphism Card */
   .glass-card {
     @apply relative rounded-xl border border-white/10 bg-card/60 backdrop-blur-xl;
-    box-shadow: 
+    box-shadow:
       0 0 0 1px hsl(var(--glass-border)),
       0 4px 30px rgba(0, 0, 0, 0.3),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
@@ -105,7 +106,7 @@
 
   .glass-card-hover:hover {
     @apply border-primary/30;
-    box-shadow: 
+    box-shadow:
       0 0 0 1px hsl(var(--primary) / 0.3),
       0 8px 40px rgba(0, 0, 0, 0.4),
       0 0 60px -15px hsl(var(--glow-blue) / 0.4),
@@ -116,21 +117,17 @@
   /* Neon Text Gradient */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(var(--neon-blue)) 0%,
-      hsl(var(--neon-violet)) 50%,
-      hsl(var(--neon-cyan)) 100%
-    );
+    background-image: linear-gradient(135deg,
+        hsl(var(--neon-blue)) 0%,
+        hsl(var(--neon-violet)) 50%,
+        hsl(var(--neon-cyan)) 100%);
   }
 
   .text-gradient-blue {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      90deg,
-      hsl(var(--neon-cyan)) 0%,
-      hsl(var(--neon-blue)) 100%
-    );
+    background-image: linear-gradient(90deg,
+        hsl(var(--neon-cyan)) 0%,
+        hsl(var(--neon-blue)) 100%);
   }
 
   /* Glowing border effect */
@@ -141,11 +138,9 @@
   .glow-border::before {
     content: '';
     @apply absolute -inset-[1px] rounded-xl opacity-0 transition-opacity duration-300;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--neon-blue)) 0%,
-      hsl(var(--neon-violet)) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(var(--neon-blue)) 0%,
+        hsl(var(--neon-violet)) 100%);
     z-index: -1;
     filter: blur(8px);
   }
@@ -183,8 +178,15 @@
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   /* Pulse glow */
@@ -193,16 +195,208 @@
   }
 
   @keyframes pulseGlow {
-    0%, 100% { 
+
+    0%,
+    100% {
       box-shadow: 0 0 20px -5px hsl(var(--glow-blue) / 0.5);
     }
-    50% { 
+
+    50% {
       box-shadow: 0 0 30px -5px hsl(var(--glow-blue) / 0.8);
+    }
+  }
+
+  /* Slow spin animation */
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Slow spin reverse animation */
+  .animate-spin-slow-reverse {
+    animation: spin-reverse 12s linear infinite;
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Holographic Scanlines */
+  .scanline-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scanline-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        rgba(0, 255, 255, 0.05) 50%);
+    background-size: 100% 4px;
+    z-index: 10;
+    pointer-events: none;
+    animation: scanline 10s linear infinite;
+  }
+
+  @keyframes scanline {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 0 100%;
+    }
+  }
+
+  /* Cyber Glitch Effect */
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-text:hover::before,
+  .glitch-text:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+  }
+
+  .glitch-text:hover::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+
+  .glitch-text:hover::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitch-anim {
+    0% {
+      clip: rect(31px, 9999px, 94px, 0);
+    }
+
+    20% {
+      clip: rect(62px, 9999px, 42px, 0);
+    }
+
+    40% {
+      clip: rect(16px, 9999px, 78px, 0);
+    }
+
+    60% {
+      clip: rect(87px, 9999px, 84px, 0);
+    }
+
+    80% {
+      clip: rect(45px, 9999px, 13px, 0);
+    }
+
+    100% {
+      clip: rect(76px, 9999px, 55px, 0);
+    }
+  }
+
+  @keyframes glitch-anim2 {
+    0% {
+      clip: rect(65px, 9999px, 100px, 0);
+    }
+
+    20% {
+      clip: rect(4px, 9999px, 13px, 0);
+    }
+
+    40% {
+      clip: rect(82px, 9999px, 31px, 0);
+    }
+
+    60% {
+      clip: rect(21px, 9999px, 54px, 0);
+    }
+
+    80% {
+      clip: rect(98px, 9999px, 87px, 0);
+    }
+
+    100% {
+      clip: rect(12px, 9999px, 45px, 0);
+    }
+  }
+
+  /* Data Stream Background */
+  .data-stream {
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    line-height: 1;
+    color: hsl(var(--neon-blue) / 0.2);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Vertical HUD Scanline */
+  .hud-scan-line {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hud-scan-line::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom,
+        transparent,
+        hsl(var(--neon-blue) / 0.05) 50%,
+        hsl(var(--neon-blue) / 0.2) 95%,
+        hsl(var(--neon-blue) / 0.5) 100%);
+    z-index: 10;
+    pointer-events: none;
+    animation: hud-scan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes hud-scan {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(400%);
     }
   }
 }
 
 @layer utilities {
+
   /* Fade in up animation */
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
@@ -214,6 +408,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -221,16 +416,33 @@
   }
 
   /* Stagger delays */
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-  .delay-600 { animation-delay: 600ms; }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .delay-600 {
+    animation-delay: 600ms;
+  }
 
   /* Background grid pattern */
   .bg-grid {
-    background-image: 
+    background-image:
       linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 60px 60px;
@@ -238,11 +450,9 @@
 
   /* Radial gradient background */
   .bg-radial-gradient {
-    background: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      hsl(var(--neon-blue) / 0.15),
-      transparent
-    );
+    background: radial-gradient(ellipse 80% 50% at 50% -20%,
+        hsl(var(--neon-blue) / 0.15),
+        transparent);
   }
 
   /* Noise texture overlay */

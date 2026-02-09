@@ -1,0 +1,145 @@
+{
+    "nav": {
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact",
+        "hireMe": "Hire Me"
+    },
+    "hero": {
+        "greeting": "Hi, I'm",
+        "role": "Full Stack Developer",
+        "status": "Online & Available for Freelance",
+        "entity": "SYSTEM_ENTITY",
+        "cta": "View Projects",
+        "contact": "Contact Me",
+        "tagline": "I build exceptional digital experiences with modern technologies. Turning complex problems into elegant, scalable solutions.",
+        "biometric": "Biometric Scan: Verified",
+        "uid": "UID: 8829-X",
+        "user": "User_01"
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "System Identity Check",
+        "id": "A.Damaz_ID:001",
+        "location": "Lome, TG",
+        "sync": "Loc: Remote_Sync",
+        "bio_title": "EXECUTING BIOGRAPHY_DATA...",
+        "bio_status": "SEC_LEVEL_01",
+        "bio": "I'm a full-stack developer with 2+ years of experience building web applications. My journey started with curiosity about how things work on the internet, and it evolved into a passion for crafting exceptional user experiences.",
+        "bio_highlights": "I specialize in React, NextJS, Laravel, Node.js, Flutter and cloud technologies. When I'm not coding, you me find me exploring new frameworks, contributing to open source, or sharing knowledge through technical writing.",
+        "bio_focus": "Currently focused on building AI-powered applications and exploring the intersection of machine learning and web development.",
+        "status": "Status: Online",
+        "modules": {
+            "cleanCode": {
+                "title": "Clean Code",
+                "desc": "Writing maintainable, scalable code that stands the test of time."
+            },
+            "fastDelivery": {
+                "title": "Fast Delivery",
+                "desc": "Turning ideas into production-ready applications efficiently."
+            },
+            "modernStack": {
+                "title": "Modern Stack",
+                "desc": "Using cutting-edge technologies for optimal performance."
+            }
+        }
+    },
+    "tech": {
+        "title_start": "",
+        "title_end": "",
+        "scanning": "Mapping the constellations of my technical expertise...",
+        "labels": {
+            "orbit": "Orbit_Core",
+            "neural": "Neural_Link",
+            "dev": "Dev_Utility"
+        },
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Tools"
+    },
+    "projects": {
+        "title_start": "Featured ",
+        "title_end": "Work",
+        "subtitle": "Repository_Access_v2",
+        "mining": "Mining archives... Retrieving innovative and robust solutions.",
+        "viewAll": "[ ACCESS_FULL_ARCHIVE ]",
+        "srcCode": "SRC_CODE",
+        "liveSys": "LIVE_SYS",
+        "list": {
+            "superM": {
+                "title": "Super M",
+                "subtitle": "Supermarket Management",
+                "desc": "Complete stock management, sales, and checkout system for modern supermarkets."
+            },
+            "rodFluidity": {
+                "title": "Rod Fluidity",
+                "subtitle": "Analytical Dashboard",
+                "desc": "Enterprise project for JusteInnover: Real-time visualization and analysis platform for data on barriers to cross-border and regional trade, based on advanced performance indicators."
+            },
+            "cafe": {
+                "title": "Café E-commerce",
+                "subtitle": "Online Coffee Store",
+                "desc": "Elegant interface for high-end coffee sales with optimized user experience."
+            },
+            "commerceTracking": {
+                "title": "CommerceTracking",
+                "subtitle": "Admin Dashboard",
+                "desc": "Enterprise project for JusteInnover: Platform for tracking informal cross-border agricultural trade. Digitalizing field data to strengthen regional governance and food security."
+            },
+            "cvGenerator": {
+                "title": "CV Generator",
+                "subtitle": "Resume Generation System",
+                "desc": "Application for generating professional resumes in PDF format with multiple styling options."
+            },
+            "iaResearch": {
+                "title": "IA Perfect Research",
+                "subtitle": "Intelligent Research",
+                "desc": "Enterprise project for JusteInnover : AI-assisted search engine for document analysis and information extraction."
+            },
+            "dSend": {
+                "title": "D-Send",
+                "subtitle": "Secure File Transfer",
+                "desc": "End-to-end encrypted solution for secure sharing of large files and instant messaging."
+            },
+            "todoMobile": {
+                "title": "Todo Mobile",
+                "subtitle": "Productivity App",
+                "desc": "Mobile task management application with cloud synchronization and offline capabilities."
+            },
+            "bovanGroup": {
+                "title": "Bovan Group",
+                "subtitle": "Corporate Website",
+                "desc": "High-impact communication and web strategy platform. Helping companies stand out with expert social media management and high-performance websites."
+            },
+            "cocec": {
+                "title": "COCEC Togo",
+                "subtitle": "Microfinance Ecosystem",
+                "desc": "Full development of the institutional website and custom Backoffice using Laravel for a leading microfinance institution."
+            }
+        },
+        "status": {
+            "stable": "STABLE",
+            "active": "ACTIVE",
+            "live": "LIVE",
+            "released": "RELEASED",
+            "beta": "BETA",
+            "encrypted": "ENCRYPTED"
+        }
+    },
+    "footer": {
+        "builtBy": "Adododji Damaz // Data Architecture • Resilient Solutions // [SYSTEM_TRUST_ESTABLISHED]"
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "desc": "Have a project in mind or want to discuss opportunities? I'm always open to new ideas and collaborations.",
+        "email": "Email",
+        "location": "Location",
+        "ready": "Ready to start your next project?",
+        "cta": "Chat on WhatsApp",
+        "whatsappLink": "https://wa.me/22892970418?text=Hello! I'm interested in your services.",
+        "status": "Comm_Link: Ready",
+        "neural": "Neural Connection",
+        "terminal": "COMM_INIT_SECURE_V3"
+    }
+}

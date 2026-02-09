@@ -1,28 +1,24 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="py-8 border-t border-border/50">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Logo */}
-          <a href="#" className="text-lg font-bold text-gradient-blue">
-            &lt;DEV /&gt;
-          </a>
-
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Alex Chen. Built with passion.
+            © {currentYear} {t("footer.builtBy")}
           </p>
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Twitter, href: "#", label: "Twitter" },
+              { icon: Github, href: "https://github.com/Damfeu", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/kokouvi-damaz-adododji-8b5424285", label: "LinkedIn" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

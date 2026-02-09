@@ -1,0 +1,145 @@
+{
+    "nav": {
+        "about": "À Propos",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "contact": "Contact",
+        "hireMe": "Me Contacter"
+    },
+    "hero": {
+        "greeting": "Salut, je suis",
+        "role": "Développeur Full Stack",
+        "status": "En ligne & Disponible en Freelance",
+        "entity": "ENTITE_SYSTEME",
+        "cta": "Voir les Projets",
+        "contact": "Contactez-moi",
+        "tagline": "Je conçois des expériences numériques d'exception avec des technologies modernes. Je transforme des problèmes complexes en solutions élégantes et évolutives.",
+        "biometric": "Scan Biométrique : Vérifié",
+        "uid": "UID : 8829-X",
+        "user": "Utilisateur_01"
+    },
+    "about": {
+        "title": "À Propos",
+        "subtitle": "Vérification d'Identité",
+        "id": "A.Damaz_ID:001",
+        "location": "Lomé, TG",
+        "sync": "Loc : Synchro_Distante",
+        "bio_title": "EXÉCUTION DONNÉES_BIOGRAPHIE...",
+        "bio_status": "NIVEAU_SEC_01",
+        "bio": "Je suis un développeur full-stack avec plus de 2 ans d'expérience dans la création d'applications web. Mon parcours a débuté par une curiosité sur le fonctionnement d'internet, et s'est transformé en une passion pour la création d'expériences utilisateur exceptionnelles.",
+        "bio_highlights": "Je me suis spécialisé dans React, NextJS, Laravel, Node.js, Flutter et les technologies cloud. Quand je ne code pas, vous me trouverez en train d'explorer de nouveaux frameworks, de contribuer à l'open source ou de partager mes connaissances par le biais de la rédaction technique.",
+        "bio_focus": "Actuellement concentré sur le développement d'applications basées sur l'IA et l'exploration de l'intersection entre l'apprentissage automatique et le développement web.",
+        "status": "Statut : En ligne",
+        "modules": {
+            "cleanCode": {
+                "title": "Code Propre",
+                "desc": "Écriture de code maintenable et évolutif qui résiste à l'épreuve du temps."
+            },
+            "fastDelivery": {
+                "title": "Livraison Rapide",
+                "desc": "Transformer des idées en applications prêtes pour la production de manière efficace."
+            },
+            "modernStack": {
+                "title": "Stack Moderne",
+                "desc": "Utilisation de technologies de pointe pour des performances optimales."
+            }
+        }
+    },
+    "tech": {
+        "title_start": "Stack ",
+        "title_end": "Technique",
+        "scanning": "Cartographie des constellations de mon expertise technique...",
+        "labels": {
+            "orbit": "Noyau_Orbite",
+            "neural": "Lien_Neural",
+            "dev": "Utilitaire_Dév"
+        },
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Outils"
+    },
+    "projects": {
+        "title_start": "Mes ",
+        "title_end": "Réalisations",
+        "subtitle": "Accès_Répertoire_v2",
+        "mining": "Exploitation des archives... Récupération de solutions innovantes.",
+        "viewAll": "[ ACCÉDER À L'ARCHIVE COMPLÈTE ]",
+        "srcCode": "CODE_SOURCE",
+        "liveSys": "SYSTÈME_LIVE",
+        "list": {
+            "superM": {
+                "title": "Super M",
+                "subtitle": "Gestion de Supermarché",
+                "desc": "Système complet de gestion de stock, de ventes et d'encaissement pour supermarchés modernes."
+            },
+            "rodFluidity": {
+                "title": "Rod Fluidity",
+                "subtitle": "Tableau de Bord Analytique",
+                "desc": "Projet d'entreprise pour JusteInnover : Plateforme de visualisation et d’analyse en temps réel des données sur les entraves au commerce transfrontalier et régional, basé sur des indicateurs de performance avancés"
+            },
+            "cafe": {
+                "title": "Café E-commerce",
+                "subtitle": "Boutique de Café en Ligne",
+                "desc": "Interface élégante pour la vente de café haut de gamme avec une expérience utilisateur optimisée."
+            },
+            "commerceTracking": {
+                "title": "CommerceTracking",
+                "subtitle": "Tableau de Bord Admin",
+                "desc": "Projet d'entreprise pour JusteInnover : Plateforme de suivi des échanges agricoles transfrontaliers informels. Collecte et analyse de données terrain pour renforcer la gouvernance et la sécurité alimentaire régionale."
+            },
+            "cvGenerator": {
+                "title": "CV Generator",
+                "subtitle": "Système de Génération de CV",
+                "desc": "Application pour générer des CV professionnels au format PDF avec de multiples options de style."
+            },
+            "iaResearch": {
+                "title": "IA Perfect Research",
+                "subtitle": "Recherche Intelligente",
+                "desc": "Projet d'entreprise pour JusteInnover : Moteur de recherche assisté par IA pour l'analyse de documents et l'extraction d'informations."
+            },
+            "dSend": {
+                "title": "D-Send",
+                "subtitle": "Transfert de Fichiers Sécurisé",
+                "desc": "Solution cryptée de bout en bout pour le partage de fichiers volumineux et d'une messagerie instantané en toute sécurité."
+            },
+            "todoMobile": {
+                "title": "Todo Mobile",
+                "subtitle": "Application de Productivité",
+                "desc": "Application mobile de gestion de tâches avec synchronisation cloud et capacités hors ligne."
+            },
+            "bovanGroup": {
+                "title": "Bovan Group",
+                "subtitle": "Site Institutionnel",
+                "desc": "Plateforme de communication stratégique. Aide les entreprises à se démarquer par une gestion experte des réseaux sociaux et des sites web performants."
+            },
+            "cocec": {
+                "title": "COCEC Togo",
+                "subtitle": "Écosystème Microfinance",
+                "desc": "Développement complet du site institutionnel et du Backoffice sur mesure avec Laravel pour une grande institution de microfinance."
+            }
+        },
+        "status": {
+            "stable": "STABLE",
+            "active": "ACTIF",
+            "live": "LIVE",
+            "released": "PUBLIÉ",
+            "beta": "BÉTA",
+            "encrypted": "CRYPTÉ"
+        }
+    },
+    "footer": {
+        "builtBy": "Adododji Damaz // Architecture de Données • Solutions Résilientes // [SYSTEM_TRUST_ESTABLISHED]"
+    },
+    "contact": {
+        "title": "Contactez-moi",
+        "desc": "Vous avez un projet en tête ou souhaitez discuter d'opportunités ? Je suis toujours ouvert à de nouvelles idées et collaborations.",
+        "email": "Email",
+        "location": "Localisation",
+        "ready": "Prêt à lancer votre prochain projet ?",
+        "cta": "Discuter sur WhatsApp",
+        "whatsappLink": "https://wa.me/22892970418?text=Bonjour ! Je suis intéressé par vos services.",
+        "status": "Lien_Comm : Prêt",
+        "neural": "Connexion Neurale",
+        "terminal": "COMM_INIT_SÉCURISÉ_V3"
+    }
+}
