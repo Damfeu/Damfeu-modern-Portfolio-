@@ -14,9 +14,19 @@ import imgDSend from "@/assets/d-send.jpg";
 import imgTodo from "@/assets/todo-mobile.jpg";
 import imgBovan from "@/assets/BovanGroup.png";
 import imgCocec from "@/assets/COCEC.png";
+import imgDamAI from "@/assets/Dam-AI.png";
 
 const projects = [
-
+  {
+    title: "Dam AI",
+    tKey: "damAI",
+    tech: ["Next.js 15", "TypeScript", "Tailwind 4", "RAG", "Llama 3.3"],
+    image: imgDamAI,
+    id: "DATA_CORE_DA_00",
+    status: "LIVE",
+    github: "#",
+    demo: "https://dam-ai.vercel.app/",
+  },
   {
     title: "COCEC Togo",
     tKey: "cocec",

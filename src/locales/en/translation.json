@@ -116,6 +116,11 @@
                 "title": "COCEC Togo",
                 "subtitle": "Microfinance Ecosystem",
                 "desc": "Full development of the institutional website and custom Backoffice using Laravel for a leading microfinance institution."
+            },
+            "damAI": {
+                "title": "Dam AI",
+                "subtitle": "Conversational Web Intelligence",
+                "desc": "Innovative RAG-powered application that indexes and analyzes websites in real-time, allowing users to chat with any web page content."
             }
         },
         "status": {
