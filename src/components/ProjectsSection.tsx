@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Database, Layers, ShieldCheck } from "lucide-react";
+import { ExternalLink, Github, Database, Layers, ShieldCheck, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -271,7 +271,7 @@ const ProjectsSection = () => {
                         {t("projects.srcCode")}
                       </a>
                     </Button>
-                    <Button variant="ghost" size="sm" asChild className="h-8 border border-transparent hover:border-white/5 hover:bg-white/5 font-mono text-[11px] px-3">
+                    <Button variant="ghost" size="sm" asChild className="h-8 border border-transparent hover:border-white/5 hover:bg-white/5 hover:!text-neon-cyan font-mono text-[11px] px-3">
                       <a href={project.demo} className="gap-2">
                         <ExternalLink size={14} className="text-neon-cyan" />
                         {t("projects.liveSys")}
@@ -309,14 +309,18 @@ const ProjectsSection = () => {
               </>
             )}
             {showAll && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-muted-foreground hover:text-neon-blue font-mono text-[10px] tracking-widest opacity-50 hover:opacity-100"
-                onClick={() => setShowAll(false)}
-              >
-                [ {t("projects.viewAll").includes("ACCÉDER") ? "RÉDUIRE L'ARCHIVE" : "REDUCE ARCHIVE"} ]
-              </Button>
+              <>
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                <Button
+                  variant="glass"
+                  size="sm"
+                  className="group relative z-10 font-mono text-[11px] tracking-widest text-muted-foreground hover:text-neon-blue px-6"
+                  onClick={() => setShowAll(false)}
+                >
+                  <ChevronUp size={14} className="text-neon-blue transition-transform duration-300 group-hover:-translate-y-0.5" />
+                  [ {t("projects.reduceArchive")} ]
+                </Button>
+              </>
             )}
           </div>
         </div>

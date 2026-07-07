@@ -7,7 +7,66 @@
 
 @layer base {
   :root {
-    /* Dark Futuristic Theme */
+    /* Light Futuristic Theme */
+    --background: 220 25% 98%;
+    --foreground: 230 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 10%;
+
+    /* Electric Blue Primary */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Muted light */
+    --secondary: 220 20% 93%;
+    --secondary-foreground: 230 20% 20%;
+
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 10% 40%;
+
+    /* Neon Violet Accent */
+    --accent: 265 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 90%;
+    --ring: 210 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom Neon Colors */
+    --neon-blue: 210 100% 45%;
+    --neon-violet: 265 85% 55%;
+    --neon-cyan: 190 90% 38%;
+    --neon-green: 160 84% 32%;
+
+    /* Glow Effects */
+    --glow-blue: 210 100% 45%;
+    --glow-violet: 265 85% 50%;
+
+    /* Glass Effect */
+    --glass-bg: 0 0% 100% / 0.6;
+    --glass-border: 220 20% 80% / 0.4;
+
+    --sidebar-background: 220 25% 96%;
+    --sidebar-foreground: 230 20% 20%;
+    --sidebar-primary: 210 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 93%;
+    --sidebar-accent-foreground: 230 20% 20%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 210 100% 45%;
+  }
+
+  .dark {
+    /* Dark Futuristic Theme (default) */
     --background: 230 25% 4%;
     --foreground: 220 15% 90%;
 
@@ -39,8 +98,6 @@
     --input: 230 20% 12%;
     --ring: 210 100% 55%;
 
-    --radius: 0.75rem;
-
     /* Custom Neon Colors */
     --neon-blue: 210 100% 55%;
     --neon-violet: 265 90% 65%;
@@ -63,10 +120,6 @@
     --sidebar-accent-foreground: 220 15% 85%;
     --sidebar-border: 230 20% 15%;
     --sidebar-ring: 210 100% 55%;
-  }
-
-  .dark {
-    /* Already dark mode first */
   }
 }
 

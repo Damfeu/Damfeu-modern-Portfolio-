@@ -73,7 +73,7 @@ const HeroSection = () => {
           </div>
 
           {/* Profile Image Column */}
-          <div className="animate-fade-in-up delay-300 relative justify-self-center lg:justify-self-end">
+          <div className="animate-fade-in-up delay-300 relative justify-self-center lg:justify-self-end mt-8 lg:mt-16">
             <div className="relative group">
               {/* Data stream backgrounds */}
               <div className="absolute -left-12 top-0 bottom-0 w-8 data-stream hidden xl:block opacity-40">

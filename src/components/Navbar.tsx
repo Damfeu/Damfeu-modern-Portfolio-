@@ -1,16 +1,22 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const { theme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "fr" : "en";
     i18n.changeLanguage(newLang);
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const navLinks = [
@@ -47,12 +53,21 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="neon" size="sm" asChild>
-            <a href="#contact">{t("nav.hireMe")}</a>
-          </Button>
 
-          {/* Language Switcher - Absolute on desktop to keep menu centered */}
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:block">
+          {/* Language & Theme Switchers - Absolute on desktop to keep menu centered */}
+          <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="font-mono text-[10px] gap-2 border border-white/5 hover:bg-white/5 px-2"
+            >
+              {theme === "dark" ? (
+                <Sun size={14} className="text-neon-cyan" />
+              ) : (
+                <Moon size={14} className="text-neon-cyan" />
+              )}
+            </Button>
             <Button
               variant="ghost"
               size="sm"
@@ -67,15 +82,29 @@ const Navbar = () => {
 
         {/* Mobile Menu Button - Left aligned to keep visual balance if needed, or just standard right */}
         <div className="md:hidden flex items-center justify-between w-full">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleLanguage}
-            className="font-mono text-[10px] gap-2 border border-white/5"
-          >
-            <Globe size={14} className="text-neon-cyan" />
-            {i18n.language.toUpperCase()}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="font-mono text-[10px] gap-2 border border-white/5 px-2"
+            >
+              {theme === "dark" ? (
+                <Sun size={14} className="text-neon-cyan" />
+              ) : (
+                <Moon size={14} className="text-neon-cyan" />
+              )}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="font-mono text-[10px] gap-2 border border-white/5"
+            >
+              <Globe size={14} className="text-neon-cyan" />
+              {i18n.language.toUpperCase()}
+            </Button>
+          </div>
 
           <Button
             variant="ghost"
@@ -105,9 +134,6 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="neon" className="mt-2 w-full" asChild onClick={() => setIsMobileMenuOpen(false)}>
-            <a href="#contact">{t("nav.hireMe")}</a>
-          </Button>
         </div>
       </div>
     </header>
