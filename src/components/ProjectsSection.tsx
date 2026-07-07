@@ -15,8 +15,52 @@ import imgTodo from "@/assets/todo-mobile.jpg";
 import imgBovan from "@/assets/BovanGroup.png";
 import imgCocec from "@/assets/COCEC.png";
 import imgDamAI from "@/assets/Dam-AI.png";
+import imgDareKing from "@/assets/DareKing.png";
+import imgBangui24 from "@/assets/Bangui24.png";
+import imgDorcas from "@/assets/Dorcas.png";
+import imgMira from "@/assets/mira.png";
 
 const projects = [
+  {
+    title: "DareKing",
+    tKey: "dareking",
+    tech: ["Laravel", "MySQL", "React", "Cloudinary"],
+    image: imgDareKing,
+    id: "DATA_CORE_DK_11",
+    status: "LIVE",
+    github: "#",
+    demo: "https://www.dareking.fr/",
+  },
+  {
+    title: "Bangui24",
+    tKey: "bangui24",
+    tech: ["React", "Node.js"],
+    image: imgBangui24,
+    id: "DATA_CORE_B24_12",
+    status: "LIVE",
+    github: "#",
+    demo: "https://bangui24.com/",
+  },
+  {
+    title: "Dorcas",
+    tKey: "dorcas",
+    tech: ["Next.js", "Laravel", "Stripe"],
+    image: imgDorcas,
+    id: "DATA_CORE_DC_13",
+    status: "LIVE",
+    github: "#",
+    demo: "https://dorcasechurch.com/",
+  },
+  {
+    title: "Mira",
+    tKey: "mira",
+    tech: ["Laravel", "MySQL", "React"],
+    image: imgMira,
+    id: "DATA_CORE_MR_14",
+    status: "LIVE",
+    github: "#",
+    demo: "https://www.mirafagbohoun.com/",
+  },
   {
     title: "Dam AI",
     tKey: "damAI",

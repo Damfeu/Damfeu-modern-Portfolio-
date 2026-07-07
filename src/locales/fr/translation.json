@@ -121,6 +121,26 @@
                 "title": "Dam AI",
                 "subtitle": "Intelligence Web Conversationnelle",
                 "desc": "Application web innovante utilisant le RAG et Llama 3.3 pour indexer n'importe quel site en temps réel et discuter avec son contenu."
+            },
+            "dareking": {
+                "title": "DareKing",
+                "subtitle": "Portfolio Photographe",
+                "desc": "Portfolio photographique sur mesure pour un photographe basé à Toulouse, avec galerie dynamique et espace client."
+            },
+            "bangui24": {
+                "title": "Bangui24",
+                "subtitle": "Média Numérique",
+                "desc": "Premier média numérique basé à Bangui, dédié à l'actualité et à l'information locale en temps réel."
+            },
+            "dorcas": {
+                "title": "Dorcas",
+                "subtitle": "SaaS de Gestion Ecclésiale",
+                "desc": "Plateforme SaaS complète pour la gestion des églises en France : membres, finances et abonnements via Stripe."
+            },
+            "mira": {
+                "title": "Mira",
+                "subtitle": "Portfolio & Précommande Livre",
+                "desc": "Portfolio professionnel permettant également la précommande en ligne du livre de la propriétaire."
             }
         },
         "status": {

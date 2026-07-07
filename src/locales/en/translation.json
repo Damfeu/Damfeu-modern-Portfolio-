@@ -121,6 +121,26 @@
                 "title": "Dam AI",
                 "subtitle": "Conversational Web Intelligence",
                 "desc": "Innovative RAG-powered application that indexes and analyzes websites in real-time, allowing users to chat with any web page content."
+            },
+            "dareking": {
+                "title": "DareKing",
+                "subtitle": "Photographer Portfolio",
+                "desc": "Custom photography portfolio for a Toulouse-based photographer, featuring a dynamic gallery and client area."
+            },
+            "bangui24": {
+                "title": "Bangui24",
+                "subtitle": "Digital Media Outlet",
+                "desc": "First digital media outlet based in Bangui, delivering real-time local news and information."
+            },
+            "dorcas": {
+                "title": "Dorcas",
+                "subtitle": "Church Management SaaS",
+                "desc": "Full SaaS platform for church management in France: members, finances, and Stripe-powered subscriptions."
+            },
+            "mira": {
+                "title": "Mira",
+                "subtitle": "Portfolio & Book Pre-order",
+                "desc": "Professional portfolio also enabling online pre-orders for the owner's upcoming book."
             }
         },
         "status": {
