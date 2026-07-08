@@ -9,7 +9,7 @@
     "hero": {
         "greeting": "Hi, I'm",
         "role": "Full Stack Developer",
-        "status": "Online & Available for Freelance",
+       
         "entity": "SYSTEM_ENTITY",
         "cta": "View Projects",
         "contact": "Contact Me",

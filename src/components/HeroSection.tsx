@@ -18,15 +18,15 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left">
             {/* Status Badge */}
-            <div className="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 text-sm text-muted-foreground mb-8">
+            {/* <div className="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 text-sm text-muted-foreground mb-8">
               <span className="w-2 h-2 rounded-full bg-[hsl(var(--neon-green))] animate-pulse" />
               {t("hero.status")}
-            </div>
+            </div> */}
 
             {/* Main Headline */}
             <h1 className="animate-fade-in-up delay-100 text-5xl md:text-7xl font-bold tracking-tight mb-6">
               {t("hero.greeting")}{" "}
-              <span className="text-gradient glitch-text" data-text="Adododji Damaz">
+              <span className="text-foreground glitch-text" data-text="Adododji Damaz">
                 Adododji Damaz
               </span>
             </h1>
