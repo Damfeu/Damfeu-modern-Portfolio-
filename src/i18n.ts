@@ -13,11 +13,11 @@ i18n
             en: { translation: enTranslation },
             fr: { translation: frTranslation },
         },
-        fallbackLng: 'en',
+        fallbackLng: 'fr',
         detection: {
             order: ['localStorage'],
             caches: ['localStorage'],
-            lookupLocalStorage: 'portfolioLang',
+            lookupLocalStorage: 'portfolioLang_v2',
         },
         interpolation: {
             escapeValue: false,
