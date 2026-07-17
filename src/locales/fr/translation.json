@@ -142,6 +142,11 @@
                 "title": "Mira",
                 "subtitle": "Portfolio & Précommande Livre",
                 "desc": "Portfolio professionnel permettant également la précommande en ligne du livre de la propriétaire."
+            },
+            "deyaAbazene": {
+                "title": "Deya Abazene Portia",
+                "subtitle": "Site de Campagne Électorale",
+                "desc": "Site officiel de campagne pour une candidate à la mairie de Bangui (RCA), communiquant sa vision, ses projets et son actualité. Espace de publication pour les actualités, plateforme responsive optimisée pour une consultation fluide sur tous les supports."
             }
         },
         "status": {

@@ -142,6 +142,11 @@
                 "title": "Mira",
                 "subtitle": "Portfolio & Book Pre-order",
                 "desc": "Professional portfolio also enabling online pre-orders for the owner's upcoming book."
+            },
+            "deyaAbazene": {
+                "title": "Deya Abazene Portia",
+                "subtitle": "Political Campaign Website",
+                "desc": "Official campaign website for a candidate running for mayor of Bangui (CAR), communicating her vision, projects, and news to the population. Publishing space for campaign updates, built as a responsive platform optimized for smooth browsing on all devices."
             }
         },
         "status": {

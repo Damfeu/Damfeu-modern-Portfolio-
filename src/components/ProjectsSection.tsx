@@ -19,8 +19,19 @@ import imgDareKing from "@/assets/DareKing.png";
 import imgBangui24 from "@/assets/Bangui24.png";
 import imgDorcas from "@/assets/Dorcas.png";
 import imgMira from "@/assets/mira.png";
+import imgDeyaAbazene from "@/assets/DAP BANGUI.png";
 
 const projects = [
+  {
+    title: "Deya Abazene Portia",
+    tKey: "deyaAbazene",
+    tech: ["PHP", "MySQL"],
+    image: imgDeyaAbazene,
+    id: "DATA_CORE_DAP_15",
+    status: "LIVE",
+    github: "#",
+    demo: "https://www.nouvellenergiepourbangui.org/",
+  },
   {
     title: "DareKing",
     tKey: "dareking",
