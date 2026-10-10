@@ -7,32 +7,35 @@ import { cn } from "@/lib/utils";
 import imgTodo from "@/assets/todo-mobile-cutout.webp";
 
 const SHOWCASE_KEYS = ["dorcas", "patapay", "wisdomac", "cocec", "yadah", "anthonyMentor", "damAI", "bangui24"];
-const SHOWCASE_INTERVAL = 4000;
+const SHOWCASE_INTERVAL = 2000;
 
 const showcase = SHOWCASE_KEYS.map((key) => allProjects.find((p) => p.key === key)!).map((project) => ({
   ...project,
   domain: new URL(project.url!).hostname.replace(/^www\./, ""),
 }));
 
-/** Cycles through the showcase, paused while the tab is hidden and disabled for reduced motion */
+/**
+ * Cycles through the showcase, paused while the tab is hidden and disabled for reduced motion.
+ * Also returns the previous slide, which stays visible underneath while the next one slides in.
+ */
 function useShowcaseIndex() {
-  const [index, setIndex] = useState(0);
+  const [{ index, previous }, setSlides] = useState({ index: 0, previous: -1 });
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(() => {
-      if (!document.hidden) setIndex((i) => (i + 1) % showcase.length);
+      if (!document.hidden) setSlides(({ index }) => ({ index: (index + 1) % showcase.length, previous: index }));
     }, SHOWCASE_INTERVAL);
     return () => window.clearInterval(timer);
   }, []);
 
-  return index;
+  return { index, previous };
 }
 
 const HeroSection = () => {
   const { t } = useTranslation();
   const words = t("hero.words", { returnObjects: true }) as string[];
-  const index = useShowcaseIndex();
+  const { index, previous } = useShowcaseIndex();
   const current = showcase[index];
 
   return (
@@ -105,8 +108,10 @@ const HeroSection = () => {
                   src={project.image}
                   alt=""
                   className={cn(
-                    "absolute inset-0 h-full w-full object-cover object-top transition-[opacity,transform] duration-700 ease-out",
-                    i === index ? "scale-100 opacity-100" : "scale-[1.04] opacity-0",
+                    "absolute inset-0 h-full w-full object-cover object-top",
+                    i === index && "z-20 translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.7,0,0.2,1)]",
+                    i === previous && "z-10 translate-x-0",
+                    i !== index && i !== previous && "z-0 translate-x-full",
                   )}
                 />
               ))}
