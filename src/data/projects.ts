@@ -36,6 +36,7 @@ export interface Project {
 }
 
 export const featuredProjects: Project[] = [
+  { key: "bangui24", category: "web", stack: ["React", "Node.js"], image: imgBangui24, url: "https://bangui24.com/" },
   { key: "dorcas", category: "saas", stack: ["Next.js", "Laravel", "Stripe"], image: imgDorcas, url: "https://dorcasechurch.com/" },
   { key: "todoMobile", category: "mobile", stack: ["Kotlin", "Firebase"], image: imgTodo, repo: "https://github.com/Damfeu/ToDoList-Kotlin", mobile: true },
   { key: "damAI", category: "data", stack: ["Next.js 15", "TypeScript", "RAG", "Llama 3.3"], image: imgDamAI, url: "https://dam-ai.vercel.app/" },
@@ -48,7 +49,6 @@ const otherProjects: Project[] = [
   { key: "wisdomac", category: "web", stack: ["Next.js", "Tailwind CSS", "Stripe"], image: imgWisdomac, url: "https://wisdomac.fr/" },
   { key: "yadah", category: "web", stack: ["React", "Vite", "TanStack", "Tailwind CSS"], image: imgYadah, url: "https://yadah-peach.vercel.app/" },
   { key: "anthonyMentor", category: "web", stack: ["Next.js", "Tailwind CSS"], image: imgAnthony, url: "https://anthony-mentor.fr/" },
-  { key: "bangui24", category: "web", stack: ["React", "Node.js"], image: imgBangui24, url: "https://bangui24.com/" },
   { key: "deyaAbazene", category: "web", stack: ["PHP", "MySQL"], image: imgDeyaAbazene, url: "https://www.nouvellenergiepourbangui.org/" },
   { key: "dareking", category: "web", stack: ["Laravel", "MySQL", "React", "Cloudinary"], image: imgDareKing, url: "https://www.dareking.fr/" },
   { key: "mira", category: "saas", stack: ["Laravel", "MySQL", "React"], image: imgMira, url: "https://www.mirafagbohoun.com/" },
