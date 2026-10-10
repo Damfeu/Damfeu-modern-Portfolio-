@@ -38,14 +38,14 @@ export interface Project {
 export const featuredProjects: Project[] = [
   { key: "bangui24", category: "web", stack: ["React", "Node.js"], image: imgBangui24, url: "https://bangui24.com/" },
   { key: "dorcas", category: "saas", stack: ["Next.js", "Laravel", "Stripe"], image: imgDorcas, url: "https://dorcasechurch.com/" },
-  { key: "todoMobile", category: "mobile", stack: ["Kotlin", "Firebase"], image: imgTodo, repo: "https://github.com/Damfeu/ToDoList-Kotlin", mobile: true },
+  { key: "patapay", category: "saas", stack: ["Next.js", "Tailwind CSS"], image: imgPatapay, url: "https://patapay.vercel.app/" },
   { key: "damAI", category: "data", stack: ["Next.js 15", "TypeScript", "RAG", "Llama 3.3"], image: imgDamAI, url: "https://dam-ai.vercel.app/" },
   { key: "cocec", category: "web", stack: ["Laravel", "Blade", "MySQL", "Tailwind CSS"], image: imgCocec, url: "https://www.cocectogo.org/" },
   { key: "rodFluidity", category: "data", stack: ["React", "TypeScript", "Chart.js", "SheetJS"], image: imgRodFluidity, url: "https://platform-dev.freetrade-ofr.com/" },
 ];
 
 const otherProjects: Project[] = [
-  { key: "patapay", category: "saas", stack: ["Next.js", "Tailwind CSS"], image: imgPatapay, url: "https://patapay.vercel.app/" },
+  { key: "todoMobile", category: "mobile", stack: ["Kotlin", "Firebase"], image: imgTodo, repo: "https://github.com/Damfeu/ToDoList-Kotlin", mobile: true },
   { key: "wisdomac", category: "web", stack: ["Next.js", "Tailwind CSS", "Stripe"], image: imgWisdomac, url: "https://wisdomac.fr/" },
   { key: "yadah", category: "web", stack: ["React", "Vite", "TanStack", "Tailwind CSS"], image: imgYadah, url: "https://yadah-peach.vercel.app/" },
   { key: "anthonyMentor", category: "web", stack: ["Next.js", "Tailwind CSS"], image: imgAnthony, url: "https://anthony-mentor.fr/" },
