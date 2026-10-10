@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Reveal from "@/components/Reveal";
 import { useReveal } from "@/hooks/use-reveal";
-import { archiveProjects, projectLink, projectLinkType, type Project, type ProjectCategory } from "@/data/projects";
+import { allProjects, projectLink, projectLinkType, type Project, type ProjectCategory } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
 type Filter = "all" | ProjectCategory;
@@ -74,7 +74,7 @@ const ProjectsGrid = () => {
   const { t } = useTranslation();
   const [filter, setFilter] = useState<Filter>("all");
 
-  const visible = archiveProjects.filter((p) => filter === "all" || p.category === filter);
+  const visible = allProjects.filter((p) => filter === "all" || p.category === filter);
 
   return (
     <section aria-labelledby="archive-title" className="mx-auto max-w-[1200px] px-6 pb-32 pt-20">

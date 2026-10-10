@@ -43,7 +43,7 @@ export const featuredProjects: Project[] = [
   { key: "rodFluidity", category: "data", stack: ["React", "TypeScript", "Chart.js", "SheetJS"], image: imgRodFluidity, url: "https://platform-dev.freetrade-ofr.com/" },
 ];
 
-export const archiveProjects: Project[] = [
+const otherProjects: Project[] = [
   { key: "patapay", category: "saas", stack: ["Next.js", "Tailwind CSS"], image: imgPatapay, url: "https://patapay.vercel.app/" },
   { key: "wisdomac", category: "web", stack: ["Next.js", "Tailwind CSS", "Stripe"], image: imgWisdomac, url: "https://wisdomac.fr/" },
   { key: "yadah", category: "web", stack: ["React", "Vite", "TanStack", "Tailwind CSS"], image: imgYadah, url: "https://yadah-peach.vercel.app/" },
@@ -59,8 +59,10 @@ export const archiveProjects: Project[] = [
   { key: "superM", category: "saas", stack: ["Laravel", "MySQL", "CSS"], image: imgSuperM, repo: "https://github.com/Daniel79M/Super-m.git" },
   { key: "cafe", category: "web", stack: ["WordPress", "Stripe", "MySQL"], image: imgCafe, repo: "https://github.com/Damfeu/Ecommer-e-Wordpress" },
   { key: "dSend", category: "saas", stack: ["PHP", "MySQL"], image: imgDSend, repo: "https://github.com/Damfeu/Messagerie-inst" },
-  { key: "todoMobile", category: "mobile", stack: ["Kotlin", "Firebase"], image: imgTodo, repo: "https://github.com/Damfeu/ToDoList-Kotlin", mobile: true },
 ];
+
+/** Every project once, featured first — used by the filterable grid */
+export const allProjects: Project[] = [...featuredProjects, ...otherProjects];
 
 export const projectLink = (project: Project) => project.url ?? project.repo;
 
