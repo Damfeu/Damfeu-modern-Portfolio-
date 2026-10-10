@@ -35,7 +35,7 @@ const ProjectTile = ({ project }: { project: Project }) => {
           <ArrowUpRight size={18} />
         </span>
       )}
-      <div className="flex flex-col gap-1.5 px-[22px] py-5">
+      <div className="flex flex-1 flex-col gap-1.5 px-[22px] pb-6 pt-5">
         <div className="flex justify-between font-mono text-xs text-muted-foreground">
           <span>{t(`projects.kinds.${project.category}`)}</span>
           <span>
@@ -44,16 +44,26 @@ const ProjectTile = ({ project }: { project: Project }) => {
           </span>
         </div>
         <span className="font-display text-[22px] font-semibold tracking-tight">{title}</span>
-        <span className="text-[15px] text-muted-foreground">{t(`projects.list.${project.key}.subtitle`)}</span>
+        <span className="text-[15px] font-medium text-foreground/80">{t(`projects.list.${project.key}.subtitle`)}</span>
+        <p className="mt-1.5 line-clamp-3 text-[15px] leading-relaxed text-muted-foreground">
+          {t(`projects.list.${project.key}.desc`)}
+        </p>
+        <ul className="mt-auto flex flex-wrap gap-2 pt-4">
+          {project.stack.map((item) => (
+            <li key={item} className="chip">
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
 
   const tileClass =
-    "tile relative block overflow-hidden rounded-[20px] border border-border bg-card transition-[transform,border-color] duration-300";
+    "tile relative flex h-full flex-col overflow-hidden rounded-[20px] border border-border bg-card transition-[transform,border-color] duration-300";
 
   return (
-    <div ref={ref} className="reveal">
+    <div ref={ref} className="reveal h-full">
       {href ? (
         <a
           href={href}
