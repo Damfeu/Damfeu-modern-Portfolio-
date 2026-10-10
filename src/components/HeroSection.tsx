@@ -1,8 +1,8 @@
 import { ArrowDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import imgDorcas from "@/assets/Dorcas.png";
-import imgTodo from "@/assets/todo-mobile-cutout.png";
+import imgDorcas from "@/assets/dorcas.webp";
+import imgTodo from "@/assets/todo-mobile-cutout.webp";
 
 const HeroSection = () => {
   const { t } = useTranslation();

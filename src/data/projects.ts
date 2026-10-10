@@ -1,19 +1,19 @@
-import imgBangui24 from "@/assets/Bangui24.png";
-import imgBovan from "@/assets/BovanGroup.png";
-import imgCafe from "@/assets/cafe-ecommerce.png";
-import imgCocec from "@/assets/COCEC.png";
-import imgCommerceTracking from "@/assets/commerce-tracking-admin.png";
-import imgCV from "@/assets/cv-generator.png";
-import imgDamAI from "@/assets/Dam-AI.png";
-import imgDareKing from "@/assets/DareKing.png";
-import imgDeyaAbazene from "@/assets/DAP BANGUI.png";
-import imgDorcas from "@/assets/Dorcas.png";
-import imgDSend from "@/assets/d-send.jpg";
-import imgIA from "@/assets/ia-perfect-research.jpg";
-import imgMira from "@/assets/mira.png";
-import imgRodFluidity from "@/assets/rod-fluidity-dashboard.png";
-import imgSuperM from "@/assets/super-m.png";
-import imgTodo from "@/assets/todo-mobile-cutout.png";
+import imgBangui24 from "@/assets/bangui24.webp";
+import imgBovan from "@/assets/bovan-group.webp";
+import imgCafe from "@/assets/cafe-ecommerce.webp";
+import imgCocec from "@/assets/cocec.webp";
+import imgCommerceTracking from "@/assets/commerce-tracking-admin.webp";
+import imgCV from "@/assets/cv-generator.webp";
+import imgDamAI from "@/assets/dam-ai.webp";
+import imgDareKing from "@/assets/dareking.webp";
+import imgDeyaAbazene from "@/assets/dap-bangui.webp";
+import imgDorcas from "@/assets/dorcas.webp";
+import imgDSend from "@/assets/d-send.webp";
+import imgIA from "@/assets/ia-perfect-research.webp";
+import imgMira from "@/assets/mira.webp";
+import imgRodFluidity from "@/assets/rod-fluidity-dashboard.webp";
+import imgSuperM from "@/assets/super-m.webp";
+import imgTodo from "@/assets/todo-mobile-cutout.webp";
 
 export type ProjectCategory = "web" | "mobile" | "saas" | "data";
 
