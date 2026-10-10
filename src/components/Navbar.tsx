@@ -1,141 +1,109 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Globe, Sun, Moon } from "lucide-react";
+import { useState } from "react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
+
+const LANGUAGES = ["fr", "en"] as const;
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const { theme, setTheme } = useTheme();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "fr" : "en";
-    i18n.changeLanguage(newLang);
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const isDark = resolvedTheme !== "light";
+  const currentLang = i18n.resolvedLanguage ?? "fr";
 
   const navLinks = [
-    { href: "#about", label: t("nav.about") },
-    { href: "#skills", label: t("nav.skills") },
-    { href: "#projects", label: t("nav.projects") },
+    { href: "#travaux", label: t("nav.work") },
+    { href: "#disciplines", label: t("nav.disciplines") },
+    { href: "#services", label: t("nav.services") },
     { href: "#contact", label: t("nav.contact") },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
-        : "bg-transparent"
-        }`}
-    >
-      <nav className="container mx-auto px-6 h-16 flex items-center justify-between md:justify-center relative">
-        {/* Desktop Navigation - Centered */}
-        <div className="hidden md:flex items-center gap-8">
+    <header className="fixed inset-x-0 top-4 z-50 px-4">
+      <nav
+        aria-label={t("nav.home")}
+        className="glass relative mx-auto flex h-16 max-w-[1160px] items-center justify-between gap-4 rounded-full border border-border pl-[18px] pr-2.5"
+      >
+        <a href="#top" className="flex items-center gap-2.5 font-display text-[17px] font-bold tracking-tight">
+          <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-brand text-sm text-brand-foreground">
+            AD
+          </span>
+          <span>Damaz</span>
+        </a>
+
+        <div className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+              className="py-2.5 text-[15px] text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
           ))}
-
-          {/* Language & Theme Switchers - Absolute on desktop to keep menu centered */}
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="font-mono text-[10px] gap-2 border border-white/5 hover:bg-white/5 px-2"
-            >
-              {theme === "dark" ? (
-                <Sun size={14} className="text-neon-cyan" />
-              ) : (
-                <Moon size={14} className="text-neon-cyan" />
-              )}
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="font-mono text-[10px] gap-2 border border-white/5 hover:bg-white/5"
-            >
-              <Globe size={14} className="text-neon-cyan" />
-              {i18n.language.toUpperCase()}
-            </Button>
-          </div>
         </div>
 
-        {/* Mobile Menu Button - Left aligned to keep visual balance if needed, or just standard right */}
-        <div className="md:hidden flex items-center justify-between w-full">
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="font-mono text-[10px] gap-2 border border-white/5 px-2"
-            >
-              {theme === "dark" ? (
-                <Sun size={14} className="text-neon-cyan" />
-              ) : (
-                <Moon size={14} className="text-neon-cyan" />
-              )}
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="font-mono text-[10px] gap-2 border border-white/5"
-            >
-              <Globe size={14} className="text-neon-cyan" />
-              {i18n.language.toUpperCase()}
-            </Button>
+        <div className="flex items-center gap-2">
+          <div role="group" aria-label={t("nav.language")} className="flex rounded-full border border-border p-[3px]">
+            {LANGUAGES.map((lang) => (
+              <button
+                key={lang}
+                type="button"
+                onClick={() => i18n.changeLanguage(lang)}
+                aria-pressed={currentLang === lang}
+                className={cn(
+                  "min-h-9 min-w-10 rounded-full font-mono text-xs font-medium uppercase transition-colors",
+                  currentLang === lang ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground",
+                )}
+              >
+                {lang}
+              </button>
+            ))}
           </div>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          <button
+            type="button"
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+            aria-label={isDark ? t("nav.themeLight") : t("nav.themeDark")}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border transition-colors hover:border-foreground"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border md:hidden"
+          >
+            {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
+
+        <div
+          id="mobile-menu"
+          className={cn(
+            "glass absolute inset-x-0 top-[calc(100%+8px)] flex flex-col gap-1 rounded-3xl border border-border p-3 transition-all duration-300 md:hidden",
+            isMenuOpen ? "translate-y-0 opacity-100" : "pointer-events-none invisible -translate-y-2 opacity-0",
+          )}
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="rounded-2xl px-4 py-3 text-base font-medium transition-colors hover:bg-secondary"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </nav>
-
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/50 transition-all duration-300 ${isMobileMenuOpen
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-4 pointer-events-none"
-          }`}
-      >
-        <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-base font-medium py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
     </header>
   );
 };

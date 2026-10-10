@@ -1,72 +1,80 @@
 {
     "nav": {
-        "about": "À Propos",
-        "skills": "Compétences",
-        "projects": "Projets",
+        "home": "Accueil",
+        "work": "Travaux",
+        "disciplines": "Web & Mobile",
+        "services": "Services",
         "contact": "Contact",
-        "hireMe": "Me Contacter"
+        "language": "Langue",
+        "themeLight": "Passer en thème clair",
+        "themeDark": "Passer en thème sombre",
+        "openMenu": "Ouvrir le menu",
+        "closeMenu": "Fermer le menu"
     },
     "hero": {
-        "greeting": "Salut, je suis",
-        "role": "Développeur Full Stack",
-
-        "entity": "ENTITE_SYSTEME",
-        "cta": "Voir les Projets",
-        "contact": "Contactez-moi",
-        "tagline": "Je conçois des expériences numériques d'exception avec des technologies modernes. Je transforme des problèmes complexes en solutions élégantes et évolutives.",
-        "biometric": "Scan Biométrique : Vérifié",
-        "uid": "UID : 8829-X",
-        "user": "Utilisateur_01"
+        "badge": "Adododji Damaz · Développeur Full Stack & Mobile",
+        "titleStart": "Je conçois des",
+        "words": [
+            "sites web",
+            "apps mobiles",
+            "plateformes SaaS",
+            "outils IA"
+        ],
+        "titleEnd": "qui tiennent la route.",
+        "desc": "Du back-office Laravel à l'app Android en Kotlin, je livre des produits complets pour des clients au Togo, en Centrafrique et en France.",
+        "ctaPrimary": "Explorer mes projets",
+        "ctaSecondary": "Démarrer un projet",
+        "deployed": "Livré en production",
+        "scroll": "Défiler"
     },
-    "about": {
-        "title": "À Propos",
-        "subtitle": "Vérification d'Identité",
-        "id": "A.Damaz_ID:001",
-        "location": "Lomé, TG",
-        "sync": "Loc : Synchro_Distante",
-        "bio_title": "EXÉCUTION DONNÉES_BIOGRAPHIE...",
-        "bio_status": "NIVEAU_SEC_01",
-        "bio": "Je suis un développeur full-stack avec plus de 2 ans d'expérience dans la création d'applications web. Mon parcours a débuté par une curiosité sur le fonctionnement d'internet, et s'est transformé en une passion pour la création d'expériences utilisateur exceptionnelles.",
-        "bio_highlights": "Je me suis spécialisé dans React, NextJS, Laravel, Node.js, Flutter et les technologies cloud. Quand je ne code pas, vous me trouverez en train d'explorer de nouveaux frameworks, de contribuer à l'open source ou de partager mes connaissances par le biais de la rédaction technique.",
-        "bio_focus": "Actuellement concentré sur le développement d'applications basées sur l'IA et l'exploration de l'intersection entre l'apprentissage automatique et le développement web.",
-        "status": "Statut : En ligne",
-        "modules": {
-            "cleanCode": {
-                "title": "Code Propre",
-                "desc": "Écriture de code maintenable et évolutif qui résiste à l'épreuve du temps."
-            },
-            "fastDelivery": {
-                "title": "Livraison Rapide",
-                "desc": "Transformer des idées en applications prêtes pour la production de manière efficace."
-            },
-            "modernStack": {
-                "title": "Stack Moderne",
-                "desc": "Utilisation de technologies de pointe pour des performances optimales."
-            }
+    "marquee": {
+        "label": "Technologies"
+    },
+    "disciplines": {
+        "kicker": "01 — Deux terrains de jeu",
+        "titleStart": "Une seule personne pour votre site",
+        "titleAnd": "et",
+        "titleEnd": "votre app mobile.",
+        "web": {
+            "title": "Web",
+            "desc": "Sites institutionnels, médias, SaaS avec paiements et dashboards data. Rapides, référencés et faciles à administrer."
+        },
+        "mobile": {
+            "title": "Mobile",
+            "desc": "Applications Android natives et multiplateformes, synchronisées dans le cloud et utilisables hors ligne."
         }
     },
-    "tech": {
-        "title_start": "Stack ",
-        "title_end": "Technique",
-        "scanning": "Cartographie des constellations de mon expertise technique...",
-        "labels": {
-            "orbit": "Noyau_Orbite",
-            "neural": "Lien_Neural",
-            "dev": "Utilitaire_Dév"
-        },
-        "frontend": "Frontend",
-        "backend": "Backend",
-        "tools": "Outils"
+    "featured": {
+        "kicker": "02 — Études de cas",
+        "title": "Projets phares",
+        "hint": "Faites défiler : chaque projet vient se poser sur le précédent."
     },
     "projects": {
-        "title_start": "Mes ",
-        "title_end": "Réalisations",
-        "subtitle": "Accès_Répertoire_v2",
-        "mining": "Exploitation des archives... Récupération de solutions innovantes.",
-        "viewAll": "[ ACCÉDER À L'ARCHIVE COMPLÈTE ]",
-        "reduceArchive": "RÉDUIRE L'ARCHIVE",
-        "srcCode": "CODE_SOURCE",
-        "liveSys": "VOIR LE SITE",
+        "title": "Toutes les réalisations",
+        "filterLabel": "Filtrer les projets",
+        "screenshot": "Capture du projet {{title}}",
+        "filters": {
+            "all": "Tout",
+            "web": "Sites web",
+            "mobile": "Mobile",
+            "saas": "Apps & SaaS",
+            "data": "Data & IA"
+        },
+        "kinds": {
+            "web": "Site web",
+            "mobile": "App mobile",
+            "saas": "App & SaaS",
+            "data": "Data & IA"
+        },
+        "links": {
+            "live": "En ligne",
+            "code": "Code",
+            "private": "Privé"
+        },
+        "cta": {
+            "live": "Voir le site",
+            "code": "Voir le code"
+        },
         "list": {
             "superM": {
                 "title": "Super M",
@@ -147,30 +155,64 @@
                 "title": "Deya Abazene Portia",
                 "subtitle": "Site de Campagne Électorale",
                 "desc": "Site officiel de campagne pour une candidate à la mairie de Bangui (RCA), communiquant sa vision, ses projets et son actualité. Espace de publication pour les actualités, plateforme responsive optimisée pour une consultation fluide sur tous les supports."
+            },
+            "wisdomac": {
+                "title": "Wisdomac Investing",
+                "subtitle": "Formation à l'investissement en bourse",
+                "desc": "Plateforme pour apprendre à investir sur la BRVM, la bourse régionale d'Afrique de l'Ouest : masterclass gratuite, formation et accompagnement payants via Stripe, et un parcours dédié à la diaspora."
+            },
+            "patapay": {
+                "title": "PATA PAY",
+                "subtitle": "Fintech · Paiements en Afrique centrale",
+                "desc": "Site produit d'une plateforme de paiement qui réunit Mobile Money, banques, GIMACPAY et cartes derrière une seule API, avec documentation développeurs, modules et grille tarifaire."
+            },
+            "yadah": {
+                "title": "Yadah Records",
+                "subtitle": "Label de musique gospel",
+                "desc": "Site d'un label de musique chrétienne : présentation des artistes, sessions de louange, clips vidéo et statistiques d'audience YouTube et Spotify, avec une direction artistique très visuelle."
+            },
+            "anthonyMentor": {
+                "title": "Anthony Mentor",
+                "subtitle": "Mentorat de fondateurs de startups",
+                "desc": "Site d'un mentor early-stage à Toulouse : méthode en trois étapes racontée au défilement, témoignages, offres d'accompagnement et réservation d'un premier échange."
             }
-        },
-        "status": {
-            "stable": "STABLE",
-            "active": "ACTIF",
-            "live": "LIVE",
-            "released": "PUBLIÉ",
-            "beta": "BÉTA",
-            "encrypted": "CRYPTÉ"
         }
     },
-    "footer": {
-        "builtBy": "Adododji Damaz // Architecture de Données • Solutions Résilientes // [SYSTEM_TRUST_ESTABLISHED]"
+    "services": {
+        "kicker": "03 — Services",
+        "title": "Ce que je construis pour vous",
+        "items": [
+            {
+                "title": "Sites institutionnels & médias",
+                "desc": "Rapides, bien référencés, avec un back-office pensé pour vos équipes."
+            },
+            {
+                "title": "Applications mobiles",
+                "desc": "Apps Android en Kotlin ou multiplateformes en Flutter, synchronisées avec Firebase et utilisables hors ligne."
+            },
+            {
+                "title": "Plateformes SaaS",
+                "desc": "Comptes utilisateurs, abonnements Stripe, espaces d'administration : un produit prêt à vendre."
+            },
+            {
+                "title": "Dashboards data & IA",
+                "desc": "Visualisation de données terrain, exports Excel et assistants IA branchés sur vos contenus."
+            }
+        ]
     },
     "contact": {
-        "title": "Contactez-moi",
-        "desc": "Vous avez un projet en tête ou souhaitez discuter d'opportunités ? Je suis toujours ouvert à de nouvelles idées et collaborations.",
-        "email": "Email",
-        "location": "Localisation",
-        "ready": "Prêt à lancer votre prochain projet ?",
-        "cta": "Discuter sur WhatsApp",
-        "whatsappLink": "https://wa.me/22892970418?text=Bonjour ! Je suis intéressé par vos services.",
-        "status": "Lien_Comm : Prêt",
-        "neural": "Connexion Neurale",
-        "terminal": "COMM_INIT_SÉCURISÉ_V3"
+        "marquee": "Travaillons ensemble",
+        "title": "Un site, une app ou les deux ?",
+        "desc": "Décrivez votre projet en quelques lignes, je reviens vers vous avec une proposition claire.",
+        "whatsapp": "Écrire sur WhatsApp",
+        "whatsappLink": "https://wa.me/22892970418?text=Bonjour ! Je suis intéressé par vos services."
+    },
+    "footer": {
+        "location": "Lomé, Togo",
+        "tagline": "Web · Mobile · IA"
+    },
+    "notFound": {
+        "title": "Page introuvable",
+        "back": "Retour à l'accueil"
     }
 }
