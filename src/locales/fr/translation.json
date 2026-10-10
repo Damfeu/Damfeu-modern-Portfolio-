@@ -156,6 +156,26 @@
                 "title": "Deya Abazene Portia",
                 "subtitle": "Site de Campagne Électorale",
                 "desc": "Site officiel de campagne pour une candidate à la mairie de Bangui (RCA), communiquant sa vision, ses projets et son actualité. Espace de publication pour les actualités, plateforme responsive optimisée pour une consultation fluide sur tous les supports."
+            },
+            "wisdomac": {
+                "title": "Wisdomac Investing",
+                "subtitle": "Formation à l'investissement en bourse",
+                "desc": "Plateforme pour apprendre à investir sur la BRVM, la bourse régionale d'Afrique de l'Ouest : masterclass gratuite, formation et accompagnement payants via Stripe, et un parcours dédié à la diaspora."
+            },
+            "patapay": {
+                "title": "PATA PAY",
+                "subtitle": "Fintech · Paiements en Afrique centrale",
+                "desc": "Site produit d'une plateforme de paiement qui réunit Mobile Money, banques, GIMACPAY et cartes derrière une seule API, avec documentation développeurs, modules et grille tarifaire."
+            },
+            "yadah": {
+                "title": "Yadah Records",
+                "subtitle": "Label de musique gospel",
+                "desc": "Site d'un label de musique chrétienne : présentation des artistes, sessions de louange, clips vidéo et statistiques d'audience YouTube et Spotify, avec une direction artistique très visuelle."
+            },
+            "anthonyMentor": {
+                "title": "Anthony Mentor",
+                "subtitle": "Mentorat de fondateurs de startups",
+                "desc": "Site d'un mentor early-stage à Toulouse : méthode en trois étapes racontée au défilement, témoignages, offres d'accompagnement et réservation d'un premier échange."
             }
         }
     },

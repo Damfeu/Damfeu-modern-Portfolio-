@@ -14,6 +14,10 @@ import imgMira from "@/assets/mira.webp";
 import imgRodFluidity from "@/assets/rod-fluidity-dashboard.webp";
 import imgSuperM from "@/assets/super-m.webp";
 import imgTodo from "@/assets/todo-mobile-cutout.webp";
+import imgAnthony from "@/assets/anthony-mentor.webp";
+import imgPatapay from "@/assets/patapay.webp";
+import imgWisdomac from "@/assets/wisdomac.webp";
+import imgYadah from "@/assets/yadah-records.webp";
 
 export type ProjectCategory = "web" | "mobile" | "saas" | "data";
 
@@ -40,6 +44,10 @@ export const featuredProjects: Project[] = [
 ];
 
 export const archiveProjects: Project[] = [
+  { key: "patapay", category: "saas", stack: ["Next.js", "Tailwind CSS"], image: imgPatapay, url: "https://patapay.vercel.app/" },
+  { key: "wisdomac", category: "web", stack: ["Next.js", "Tailwind CSS", "Stripe"], image: imgWisdomac, url: "https://wisdomac.fr/" },
+  { key: "yadah", category: "web", stack: ["React", "Vite", "TanStack", "Tailwind CSS"], image: imgYadah, url: "https://yadah-peach.vercel.app/" },
+  { key: "anthonyMentor", category: "web", stack: ["Next.js", "Tailwind CSS"], image: imgAnthony, url: "https://anthony-mentor.fr/" },
   { key: "bangui24", category: "web", stack: ["React", "Node.js"], image: imgBangui24, url: "https://bangui24.com/" },
   { key: "deyaAbazene", category: "web", stack: ["PHP", "MySQL"], image: imgDeyaAbazene, url: "https://www.nouvellenergiepourbangui.org/" },
   { key: "dareking", category: "web", stack: ["Laravel", "MySQL", "React", "Cloudinary"], image: imgDareKing, url: "https://www.dareking.fr/" },

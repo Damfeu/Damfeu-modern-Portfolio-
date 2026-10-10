@@ -156,6 +156,26 @@
                 "title": "Deya Abazene Portia",
                 "subtitle": "Political Campaign Website",
                 "desc": "Official campaign website for a candidate running for mayor of Bangui (CAR), communicating her vision, projects, and news to the population. Publishing space for campaign updates, built as a responsive platform optimized for smooth browsing on all devices."
+            },
+            "wisdomac": {
+                "title": "Wisdomac Investing",
+                "subtitle": "Stock market investing course",
+                "desc": "Platform for learning to invest on the BRVM, West Africa's regional stock exchange: free masterclass, paid course and coaching through Stripe, plus a dedicated path for the diaspora."
+            },
+            "patapay": {
+                "title": "PATA PAY",
+                "subtitle": "Fintech · Payments in Central Africa",
+                "desc": "Product site for a payment platform that brings Mobile Money, banks, GIMACPAY and cards together behind a single API, with developer docs, modules and pricing."
+            },
+            "yadah": {
+                "title": "Yadah Records",
+                "subtitle": "Gospel music label",
+                "desc": "Website for a Christian music label: artist profiles, worship sessions, music videos and YouTube and Spotify audience stats, with a bold visual art direction."
+            },
+            "anthonyMentor": {
+                "title": "Anthony Mentor",
+                "subtitle": "Startup founder mentoring",
+                "desc": "Website for an early-stage mentor in Toulouse: a three-step method told through scrolling, testimonials, coaching plans and booking a first call."
             }
         }
     },
