@@ -25,7 +25,6 @@
         "ctaPrimary": "Explorer mes projets",
         "ctaSecondary": "Démarrer un projet",
         "deployed": "Livré en production",
-        "deployedValue": "Web · Android · SaaS",
         "scroll": "Défiler"
     },
     "marquee": {

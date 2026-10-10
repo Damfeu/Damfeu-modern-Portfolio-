@@ -219,6 +219,14 @@
     50% { transform: translateY(-22px) rotate(-2deg); }
   }
 
+  /* Progress bar under the hero showcase, restarted on each slide */
+  .showcase-progress {
+    width: 0;
+    animation: showcase-progress linear forwards;
+  }
+
+  @keyframes showcase-progress { to { width: 100%; } }
+
   /* Infinite marquee: two identical tracks side by side */
   .marquee {
     display: flex;

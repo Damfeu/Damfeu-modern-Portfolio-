@@ -1,12 +1,39 @@
+import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import imgDorcas from "@/assets/dorcas.webp";
+import { allProjects } from "@/data/projects";
+import { cn } from "@/lib/utils";
 import imgTodo from "@/assets/todo-mobile-cutout.webp";
+
+const SHOWCASE_KEYS = ["dorcas", "patapay", "wisdomac", "cocec", "yadah", "anthonyMentor", "damAI", "bangui24"];
+const SHOWCASE_INTERVAL = 4000;
+
+const showcase = SHOWCASE_KEYS.map((key) => allProjects.find((p) => p.key === key)!).map((project) => ({
+  ...project,
+  domain: new URL(project.url!).hostname.replace(/^www\./, ""),
+}));
+
+/** Cycles through the showcase, paused while the tab is hidden and disabled for reduced motion */
+function useShowcaseIndex() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      if (!document.hidden) setIndex((i) => (i + 1) % showcase.length);
+    }, SHOWCASE_INTERVAL);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  return index;
+}
 
 const HeroSection = () => {
   const { t } = useTranslation();
   const words = t("hero.words", { returnObjects: true }) as string[];
+  const index = useShowcaseIndex();
+  const current = showcase[index];
 
   return (
     <section
@@ -67,9 +94,28 @@ const HeroSection = () => {
               <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
-              <span className="ml-3 font-mono text-[11px] text-muted-foreground">dorcasechurch.com</span>
+              <span key={current.domain} className="ml-3 animate-fade-in font-mono text-[11px] text-muted-foreground">
+                {current.domain}
+              </span>
             </div>
-            <img src={imgDorcas} alt="" className="block aspect-[16/10] w-full object-cover object-top" />
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-background">
+              {showcase.map((project, i) => (
+                <img
+                  key={project.key}
+                  src={project.image}
+                  alt=""
+                  className={cn(
+                    "absolute inset-0 h-full w-full object-cover object-top transition-[opacity,transform] duration-700 ease-out",
+                    i === index ? "scale-100 opacity-100" : "scale-[1.04] opacity-0",
+                  )}
+                />
+              ))}
+              <span
+                key={index}
+                className="showcase-progress absolute bottom-0 left-0 h-[3px] bg-brand"
+                style={{ animationDuration: `${SHOWCASE_INTERVAL}ms` }}
+              />
+            </div>
           </div>
 
           <div className="stage-phone absolute -bottom-6 left-0 w-[150px] sm:-left-6 sm:w-[200px]">
@@ -82,7 +128,9 @@ const HeroSection = () => {
 
           <div className="glass absolute bottom-6 right-3 flex flex-col gap-0.5 rounded-2xl border border-border px-3.5 py-2.5 font-mono text-xs">
             <span className="text-muted-foreground">{t("hero.deployed")}</span>
-            <span className="text-sm">{t("hero.deployedValue")}</span>
+            <span key={current.key} className="animate-fade-in text-sm">
+              {t(`projects.list.${current.key}.title`)}
+            </span>
           </div>
         </div>
       </div>

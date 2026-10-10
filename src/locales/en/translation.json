@@ -25,7 +25,6 @@
         "ctaPrimary": "Explore my work",
         "ctaSecondary": "Start a project",
         "deployed": "Shipped to production",
-        "deployedValue": "Web · Android · SaaS",
         "scroll": "Scroll"
     },
     "marquee": {
