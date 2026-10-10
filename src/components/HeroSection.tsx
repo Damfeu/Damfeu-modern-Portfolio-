@@ -1,130 +1,99 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import imgDorcas from "@/assets/Dorcas.png";
+import imgTodo from "@/assets/todo-mobile-cutout.png";
 
 const HeroSection = () => {
   const { t } = useTranslation();
+  const words = t("hero.words", { returnObjects: true }) as string[];
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-grid opacity-50" />
-      <div className="absolute inset-0 bg-radial-gradient" />
+    <section
+      id="top"
+      aria-labelledby="hero-title"
+      className="relative flex min-h-screen items-center overflow-hidden px-6 pb-20 pt-36"
+    >
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <div className="blob blob-1 -left-[120px] -top-20 h-[560px] w-[560px] bg-brand" />
+        <div className="blob blob-2 -right-40 top-[120px] h-[620px] w-[620px] bg-brand-2" />
+        <div className="blob blob-3 -bottom-[220px] left-[38%] h-[420px] w-[420px] bg-brand-2 !opacity-35" />
+        <div className="gridlines" />
+      </div>
 
-      {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-neon-blue/5 blur-3xl float" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-neon-violet/5 blur-3xl float" style={{ animationDelay: '-3s' }} />
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-left">
-            {/* Status Badge */}
-            {/* <div className="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 text-sm text-muted-foreground mb-8">
-              <span className="w-2 h-2 rounded-full bg-[hsl(var(--neon-green))] animate-pulse" />
-              {t("hero.status")}
-            </div> */}
-
-            {/* Main Headline */}
-            <h1 className="animate-fade-in-up delay-100 text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              {t("hero.greeting")}{" "}
-              <span className="text-foreground glitch-text" data-text="Adododji Damaz">
-                Adododji Damaz
-              </span>
-            </h1>
-
-            {/* Role */}
-            <p className="animate-fade-in-up delay-200 text-xl md:text-2xl text-muted-foreground font-light mb-4 font-mono">
-              <span className="text-neon-cyan">&gt;</span> {t("hero.role")}
-            </p>
-
-            {/* Tagline */}
-            <p className="animate-fade-in-up delay-300 text-lg text-muted-foreground/80 max-w-2xl mb-10">
-              {t("hero.tagline")}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="animate-fade-in-up delay-400 flex flex-col sm:flex-row items-center gap-4 mb-12">
-              <Button variant="neon" size="lg" className="group" asChild>
-                <a href="#projects">
-                  {t("hero.cta")}
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Button variant="neon-outline" size="lg" asChild>
-                <a href="#contact">{t("hero.contact")}</a>
-              </Button>
-            </div>
-
-            {/* Social Links */}
-            <div className="animate-fade-in-up delay-500 flex items-center gap-4">
-              {[
-                { icon: Github, href: "https://github.com/Damfeu", label: "GitHub" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/kokouvi-damaz-adododji-8b5424285", label: "LinkedIn" },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="p-3 rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 hover:bg-secondary transition-all duration-300"
-                >
-                  <Icon size={20} />
-                </a>
-              ))}
-            </div>
+      <div className="relative mx-auto flex w-full min-w-0 max-w-[1200px] flex-wrap items-center gap-12">
+        <div className="flex min-w-0 flex-[999_1_540px] flex-col gap-7 animate-fade-in-up">
+          <div className="glass inline-flex items-center gap-2.5 self-start rounded-full border border-border px-4 py-2 text-sm">
+            <span className="h-2 w-2 rounded-full bg-brand shadow-[0_0_12px_hsl(var(--brand))]" />
+            {t("hero.badge")}
           </div>
 
-          {/* Profile Image Column */}
-          <div className="animate-fade-in-up delay-300 relative justify-self-center lg:justify-self-end mt-8 lg:mt-16">
-            <div className="relative group">
-              {/* Data stream backgrounds */}
-              <div className="absolute -left-12 top-0 bottom-0 w-8 data-stream hidden xl:block opacity-40">
-                1010011100101101010101001110010110101
-              </div>
-              <div className="absolute -right-12 top-0 bottom-0 w-8 data-stream hidden xl:block opacity-40">
-                0110101001110010110101011010100111001
-              </div>
+          <h1
+            id="hero-title"
+            className="font-display text-[clamp(36px,7vw,92px)] font-semibold leading-[1.02] tracking-[-0.04em]"
+          >
+            {t("hero.titleStart")}
+            <span className="ticker" aria-hidden="true">
+              <span className="ticker-track">
+                {[...words, words[0]].map((word, i) => (
+                  <span key={i}>
+                    <span className="text-gradient">{word}</span>
+                  </span>
+                ))}
+              </span>
+            </span>
+            <span className="sr-only">{words.join(", ")}</span>
+            {t("hero.titleEnd")}
+          </h1>
 
-              {/* Decorative elements behind image */}
-              <div className="absolute -inset-4 bg-glow-gradient opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
+          <p className="max-w-[540px] text-[19px] text-muted-foreground">{t("hero.desc")}</p>
 
-              <div className="relative glass-card p-2 rounded-2xl overflow-hidden float scanline-overlay">
-                {/* Cyberpunk corner markers */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-neon-cyan z-20" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-neon-cyan z-20" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-neon-cyan z-20" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-neon-cyan z-20" />
+          <div className="flex flex-wrap gap-3">
+            <Button variant="brand" size="xl" asChild>
+              <a href="#travaux">
+                {t("hero.ctaPrimary")}
+                <ArrowDown />
+              </a>
+            </Button>
+            <Button variant="glass" size="xl" asChild>
+              <a href="#contact">{t("hero.ctaSecondary")}</a>
+            </Button>
+          </div>
+        </div>
 
-                <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-                <img
-                  src="/images/Photos semiComplet.png"
-                  alt="Adododji Damaz"
-                  className="w-full max-w-[400px] aspect-[3/4] object-cover rounded-xl grayscale-[20%] sepia-[10%] group-hover:grayscale-0 transition-all duration-700"
-                />
-
-                {/* Information Overlay or Cyberpunk details */}
-                <div className="absolute bottom-4 left-4 right-4 p-3 glass-card bg-background/40 backdrop-blur-md border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                  <div className="flex justify-between items-center text-[10px] uppercase tracking-tighter text-neon-blue font-mono">
-                    <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-neon-blue animate-pulse" />
-                      {t("hero.biometric")}
-                    </span>
-                    <span>{t("hero.uid")}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Orbital elements */}
-              <div className="absolute -top-6 -right-6 w-16 h-16 rounded-full border border-neon-cyan/20 flex items-center justify-center animate-spin-slow">
-                <div className="w-3 h-3 rounded-full bg-neon-cyan pulse-glow" />
-                <div className="absolute -top-1 left-1/2 w-1 h-1 bg-neon-cyan rounded-full" />
-              </div>
-
-              <div className="absolute -top-10 left-0 font-mono text-[10px] text-neon-blue/60 uppercase tracking-widest animate-pulse">
-                {t("hero.entity")} // {t("hero.user")}
-              </div>
+        <div aria-hidden="true" className="stage relative h-[440px] min-w-0 flex-[1_1_420px] sm:h-[520px]">
+          <div className="stage-browser absolute right-0 top-5 w-[92%] overflow-hidden rounded-2xl border border-border bg-card">
+            <div className="flex h-9 items-center gap-[7px] border-b border-border px-3.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+              <span className="ml-3 font-mono text-[11px] text-muted-foreground">dorcasechurch.com</span>
             </div>
+            <img src={imgDorcas} alt="" className="block aspect-[16/10] w-full object-cover object-top" />
+          </div>
+
+          <div className="stage-phone absolute -bottom-6 left-0 w-[150px] sm:-left-6 sm:w-[200px]">
+            <img
+              src={imgTodo}
+              alt=""
+              className="h-auto w-full drop-shadow-[0_40px_60px_rgba(0,0,0,0.55)]"
+            />
+          </div>
+
+          <div className="glass absolute bottom-6 right-3 flex flex-col gap-0.5 rounded-2xl border border-border px-3.5 py-2.5 font-mono text-xs">
+            <span className="text-muted-foreground">{t("hero.deployed")}</span>
+            <span className="text-sm">{t("hero.deployedValue")}</span>
           </div>
         </div>
       </div>
+
+      <a
+        href="#disciplines"
+        className="absolute bottom-7 left-1/2 flex min-h-11 -translate-x-1/2 flex-col items-center gap-2 font-mono text-xs text-muted-foreground"
+      >
+        {t("hero.scroll")}
+        <span className="h-8 w-px bg-gradient-to-b from-muted-foreground to-transparent" />
+      </a>
     </section>
   );
 };

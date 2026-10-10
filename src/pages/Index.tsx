@@ -1,20 +1,24 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
+import TechMarquee from "@/components/TechMarquee";
+import DisciplinesSection from "@/components/DisciplinesSection";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import ProjectsGrid from "@/components/ProjectsGrid";
+import ServicesSection from "@/components/ServicesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background noise-overlay">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
+        <TechMarquee />
+        <DisciplinesSection />
+        <FeaturedProjects />
+        <ProjectsGrid />
+        <ServicesSection />
         <ContactSection />
       </main>
       <Footer />

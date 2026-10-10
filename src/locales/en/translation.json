@@ -1,72 +1,81 @@
 {
     "nav": {
-        "about": "About",
-        "skills": "Skills",
-        "projects": "Projects",
+        "home": "Home",
+        "work": "Work",
+        "disciplines": "Web & Mobile",
+        "services": "Services",
         "contact": "Contact",
-        "hireMe": "Hire Me"
+        "language": "Language",
+        "themeLight": "Switch to light theme",
+        "themeDark": "Switch to dark theme",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu"
     },
     "hero": {
-        "greeting": "Hi, I'm",
-        "role": "Full Stack Developer",
-       
-        "entity": "SYSTEM_ENTITY",
-        "cta": "View Projects",
-        "contact": "Contact Me",
-        "tagline": "I build exceptional digital experiences with modern technologies. Turning complex problems into elegant, scalable solutions.",
-        "biometric": "Biometric Scan: Verified",
-        "uid": "UID: 8829-X",
-        "user": "User_01"
+        "badge": "Adododji Damaz · Full Stack & Mobile Developer",
+        "titleStart": "I build",
+        "words": [
+            "websites",
+            "mobile apps",
+            "SaaS platforms",
+            "AI tools"
+        ],
+        "titleEnd": "that hold up in production.",
+        "desc": "From Laravel back-offices to Android apps in Kotlin, I ship complete products for clients in Togo, the Central African Republic and France.",
+        "ctaPrimary": "Explore my work",
+        "ctaSecondary": "Start a project",
+        "deployed": "Shipped to production",
+        "deployedValue": "Web · Android · SaaS",
+        "scroll": "Scroll"
     },
-    "about": {
-        "title": "About Me",
-        "subtitle": "System Identity Check",
-        "id": "A.Damaz_ID:001",
-        "location": "Lome, TG",
-        "sync": "Loc: Remote_Sync",
-        "bio_title": "EXECUTING BIOGRAPHY_DATA...",
-        "bio_status": "SEC_LEVEL_01",
-        "bio": "I'm a full-stack developer with 2+ years of experience building web applications. My journey started with curiosity about how things work on the internet, and it evolved into a passion for crafting exceptional user experiences.",
-        "bio_highlights": "I specialize in React, NextJS, Laravel, Node.js, Flutter and cloud technologies. When I'm not coding, you me find me exploring new frameworks, contributing to open source, or sharing knowledge through technical writing.",
-        "bio_focus": "Currently focused on building AI-powered applications and exploring the intersection of machine learning and web development.",
-        "status": "Status: Online",
-        "modules": {
-            "cleanCode": {
-                "title": "Clean Code",
-                "desc": "Writing maintainable, scalable code that stands the test of time."
-            },
-            "fastDelivery": {
-                "title": "Fast Delivery",
-                "desc": "Turning ideas into production-ready applications efficiently."
-            },
-            "modernStack": {
-                "title": "Modern Stack",
-                "desc": "Using cutting-edge technologies for optimal performance."
-            }
+    "marquee": {
+        "label": "Technologies"
+    },
+    "disciplines": {
+        "kicker": "01 — Two playgrounds",
+        "titleStart": "One person for your website",
+        "titleAnd": "and",
+        "titleEnd": "your mobile app.",
+        "web": {
+            "title": "Web",
+            "desc": "Institutional sites, media, SaaS with payments and data dashboards. Fast, search-friendly and easy to manage."
+        },
+        "mobile": {
+            "title": "Mobile",
+            "desc": "Native Android and cross-platform apps, synced to the cloud and usable offline."
         }
     },
-    "tech": {
-        "title_start": "",
-        "title_end": "",
-        "scanning": "Mapping the constellations of my technical expertise...",
-        "labels": {
-            "orbit": "Orbit_Core",
-            "neural": "Neural_Link",
-            "dev": "Dev_Utility"
-        },
-        "frontend": "Frontend",
-        "backend": "Backend",
-        "tools": "Tools"
+    "featured": {
+        "kicker": "02 — Case studies",
+        "title": "Featured projects",
+        "hint": "Keep scrolling: each project stacks on top of the previous one."
     },
     "projects": {
-        "title_start": "Featured ",
-        "title_end": "Work",
-        "subtitle": "Repository_Access_v2",
-        "mining": "Mining archives... Retrieving innovative and robust solutions.",
-        "viewAll": "[ ACCESS_FULL_ARCHIVE ]",
-        "reduceArchive": "REDUCE_ARCHIVE",
-        "srcCode": "SRC_CODE",
-        "liveSys": "VIEW SITE",
+        "title": "All projects",
+        "filterLabel": "Filter projects",
+        "screenshot": "Screenshot of {{title}}",
+        "filters": {
+            "all": "All",
+            "web": "Websites",
+            "mobile": "Mobile",
+            "saas": "Apps & SaaS",
+            "data": "Data & AI"
+        },
+        "kinds": {
+            "web": "Website",
+            "mobile": "Mobile app",
+            "saas": "App & SaaS",
+            "data": "Data & AI"
+        },
+        "links": {
+            "live": "Live",
+            "code": "Code",
+            "private": "Private"
+        },
+        "cta": {
+            "live": "Visit the site",
+            "code": "View the code"
+        },
         "list": {
             "superM": {
                 "title": "Super M",
@@ -148,29 +157,43 @@
                 "subtitle": "Political Campaign Website",
                 "desc": "Official campaign website for a candidate running for mayor of Bangui (CAR), communicating her vision, projects, and news to the population. Publishing space for campaign updates, built as a responsive platform optimized for smooth browsing on all devices."
             }
-        },
-        "status": {
-            "stable": "STABLE",
-            "active": "ACTIVE",
-            "live": "LIVE",
-            "released": "RELEASED",
-            "beta": "BETA",
-            "encrypted": "ENCRYPTED"
         }
     },
-    "footer": {
-        "builtBy": "Adododji Damaz // Data Architecture • Resilient Solutions // [SYSTEM_TRUST_ESTABLISHED]"
+    "services": {
+        "kicker": "03 — Services",
+        "title": "What I build for you",
+        "items": [
+            {
+                "title": "Institutional & media websites",
+                "desc": "Fast, well indexed, with a back-office designed for your team."
+            },
+            {
+                "title": "Mobile apps",
+                "desc": "Android apps in Kotlin or cross-platform in Flutter, synced with Firebase and usable offline."
+            },
+            {
+                "title": "SaaS platforms",
+                "desc": "User accounts, Stripe subscriptions, admin areas: a product ready to sell."
+            },
+            {
+                "title": "Data & AI dashboards",
+                "desc": "Field data visualisation, Excel exports and AI assistants plugged into your content."
+            }
+        ]
     },
     "contact": {
-        "title": "Get In Touch",
-        "desc": "Have a project in mind or want to discuss opportunities? I'm always open to new ideas and collaborations.",
-        "email": "Email",
-        "location": "Location",
-        "ready": "Ready to start your next project?",
-        "cta": "Chat on WhatsApp",
-        "whatsappLink": "https://wa.me/22892970418?text=Hello! I'm interested in your services.",
-        "status": "Comm_Link: Ready",
-        "neural": "Neural Connection",
-        "terminal": "COMM_INIT_SECURE_V3"
+        "marquee": "Let's work together",
+        "title": "A website, an app, or both?",
+        "desc": "Describe your project in a few lines and I'll get back to you with a clear proposal.",
+        "whatsapp": "Message me on WhatsApp",
+        "whatsappLink": "https://wa.me/22892970418?text=Hello! I'm interested in your services."
+    },
+    "footer": {
+        "location": "Lomé, Togo",
+        "tagline": "Web · Mobile · AI"
+    },
+    "notFound": {
+        "title": "Page not found",
+        "back": "Back to home"
     }
 }

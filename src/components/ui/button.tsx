@@ -15,19 +15,17 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Futuristic neon glow button
-        neon: "relative bg-primary text-primary-foreground font-semibold shadow-[0_0_20px_-5px_hsl(var(--glow-blue)/0.6)] hover:shadow-[0_0_30px_-5px_hsl(var(--glow-blue)/0.9)] hover:bg-primary/90 border border-primary/50",
-        // Outline with glow on hover
-        "neon-outline": "relative border border-primary/50 bg-transparent text-primary hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_25px_-5px_hsl(var(--glow-blue)/0.5)]",
-        // Glass button
-        glass: "relative bg-card/60 backdrop-blur-xl text-foreground border border-white/10 hover:border-primary/30 hover:bg-card/80 hover:shadow-[0_0_20px_-5px_hsl(var(--glow-blue)/0.3)]",
+        // Lime pill with a soft glow on hover
+        brand: "rounded-full bg-brand text-brand-foreground font-semibold hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-8px_hsl(var(--brand))]",
+        // Frosted pill
+        glass: "glass rounded-full border border-border text-foreground font-semibold hover:border-foreground",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-12 rounded-lg px-8 text-base",
-        xl: "h-14 rounded-lg px-10 text-lg",
-        icon: "h-10 w-10",
+        xl: "h-[52px] px-7 text-base [&_svg]:size-[18px]",
+        icon: "h-11 w-11",
       },
     },
     defaultVariants: {
