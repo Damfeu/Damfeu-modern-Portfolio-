@@ -14,7 +14,7 @@ const MarqueeRow = ({ items, reverse }: { items: string[]; reverse?: boolean }) 
       >
         {items.map((item) => (
           <span key={item} className="whitespace-nowrap">
-            {item} <span className={reverse ? "text-brand-2" : "text-brand"}>✦</span>
+            {item} <span className={cn("ml-6 font-light", reverse ? "text-brand-2" : "text-brand")}>/</span>
           </span>
         ))}
       </div>

@@ -24,7 +24,7 @@ const ContactSection = () => {
           >
             {[0, 1].map((i) => (
               <span key={i} className="whitespace-nowrap">
-                {marquee} <span className="text-gradient">✦</span>
+                {marquee} <span className="font-light text-brand">/</span>
               </span>
             ))}
           </div>
